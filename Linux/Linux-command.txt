@@ -1,0 +1,42 @@
+ls        显示文件或目录
+  -l        显示文件详细信息
+  -a        列出当前目录下所有文件及目录，包含隐藏文件
+mkdir     创建目录
+cd        切换目录
+echo      创建含有内容的文件
+cat       查看文件内容
+cp        拷贝
+mv        移动或重命名
+  mv aa.txt bb.txt    将文件aa 更名为 bb
+rm        删除文件
+  -r        递归删除
+  -f        强制删除
+find      搜索文件
+  -name   根据文件名进行搜索
+wc        统计文本行数，字数、字符数
+rmdir     删除空目录
+pwd       显示当前目录
+tar       打包压缩
+  -c        归档文件
+  -x        压缩文件
+  -z        gzip压缩文件
+  -j        bzip2压缩文件
+  -v        显示压缩或解压缩过程
+  -f        使用归档名
+  tar -zxvf 按压缩包名解压到当前目录
+shutdown
+  -r          关机重启
+  -h          关机不重启
+  -now        立刻关机
+halt        关机
+reboot      重启
+w           显示当前登录系统的用户信息
+ip          网络配置工具
+vi          文本编辑器
+yum         基于RPM的软件包管理器
+stat        显示文件的状态信息
+exit        退出
+ps          报告当前系统的进程状态
+        ps-ef | grep (name)     显示name线程状态
+        ps aux | sort -rnk 4    按内存资源的使用量对进程进行排序
+        ps aux | sort -nk 3     按CPU资源的使用量对进程进行排序
