@@ -6,12 +6,17 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  * @author Administrator
  */
 public class ServerAcceptorHandler extends SimpleChannelInboundHandler<String> {
 
     private static Logger logger = LoggerFactory.getLogger(ServerAcceptorHandler.class);
+
+    private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
@@ -29,6 +34,7 @@ public class ServerAcceptorHandler extends SimpleChannelInboundHandler<String> {
     protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         Channel incoming = ctx.channel();
         logger.info("Client: " + incoming.remoteAddress() + " =====> " + msg);
+        incoming.writeAndFlush(in.readLine() + "\n");
     }
 
     @Override
@@ -50,4 +56,5 @@ public class ServerAcceptorHandler extends SimpleChannelInboundHandler<String> {
         incoming.close();
         cause.printStackTrace();
     }
+
 }

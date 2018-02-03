@@ -1,2 +1,2 @@
 ### netty-im-example
-netty 即时通信案例
+netty C/S通信案例
