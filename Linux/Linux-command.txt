@@ -40,3 +40,5 @@ ps          报告当前系统的进程状态
         ps-ef | grep (name)     显示name线程状态
         ps aux | sort -rnk 4    按内存资源的使用量对进程进行排序
         ps aux | sort -nk 3     按CPU资源的使用量对进程进行排序
+chmod 		修改文件权限
+	chmod 777 *.*				修改目录下所有文件属性可写可读可执行
