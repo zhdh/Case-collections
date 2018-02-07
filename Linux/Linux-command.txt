@@ -49,4 +49,6 @@ screen 		打开新窗口（需安装screen）
 iptables	防火墙
   -L          查看表中规则
 iptables -nL --line-number 		显示完整信息
-iptables -I INPUT 1 -m  state  --state  NEW  -m  tcp  -p  tcp  --dport  8080  -j  ACCEPT		在第1行后添加8080端口并启用
+iptables -I INPUT -p tcp --dport 80 -j ACCEPT		添加8080端口并启用
+service iptables restart		重启防火墙，修改生效
+netstat -ntlp	列出所有端口
