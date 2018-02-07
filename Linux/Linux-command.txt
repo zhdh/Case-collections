@@ -46,3 +46,7 @@ chmod 		修改文件权限
 screen 		打开新窗口（需安装screen）
   -li         查看已打开窗口列表
   screen -X -S 1111 quit		关闭编号为 1111 的窗口
+iptables	防火墙
+  -L          查看表中规则
+iptables -nL --line-number 		显示完整信息
+iptables -I INPUT 1 -m  state  --state  NEW  -m  tcp  -p  tcp  --dport  8080  -j  ACCEPT		在第1行后添加8080端口并启用
