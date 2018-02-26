@@ -54,3 +54,4 @@ iptables -I INPUT -p tcp --dport 8080 -j ACCEPT		添加8080端口并启用
 service iptables restart		重启防火墙，修改生效
 netstat -ntlp	列出所有端口
 passwd			密码修改
+netstat -tunlp        查看端口占用情况 	
