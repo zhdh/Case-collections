@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="false">
+	<!-- 标准输出 -->
+	<appender name="STD_OUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%logger{0}] - %msg%n</pattern>
+		</layout>
+	</appender>
+
+	<appender name="FILE_OUT"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>log.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- 按“天”生成日志文件，"%i"代表第几个文件（从0自增），并压缩成.zip包 -->
+			<fileNamePattern>logs/logback_myDemo-%d{yyyy-MM-dd}.%i.log.zip
+			</fileNamePattern>
+			<!-- 保留15天 -->
+			<maxHistory>15</maxHistory>
+			<!-- 在基于时间的基础上，基于文件大小生成日志文件策略 -->
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<!-- 单个文件大小30MB -->
+				<maxFileSize>30MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<!--对日志进行格式化 -->
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %cn [%thread] %-5level %logger -
+				%msg%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<appender name="ASYNC_OUT" class="ch.qos.logback.classic.AsyncAppender">
+		<!-- 如果队列元素超过容量80%，丢掉WARN级别以下的新日志 -->
+		<queueSize>65536</queueSize>
+		<appender-ref ref="STD_OUT" />
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="ASYNC_OUT" />
+		<appender-ref ref="FILE_OUT" />
+	</root>
+</configuration>
