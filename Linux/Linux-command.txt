@@ -31,10 +31,12 @@ shutdown
   -now        立刻关机
 halt        关机
 reboot      重启
+logout		注销
 w           显示当前登录系统的用户信息
 ip          网络配置工具
 vi          文本编辑器
 yum         基于RPM的软件包管理器
+	-update		更新yum包
 stat        显示文件的状态信息
 exit        退出
 ps          报告当前系统的进程状态
