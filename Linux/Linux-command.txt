@@ -37,6 +37,7 @@ ip          网络配置工具
 vi          文本编辑器
 yum         基于RPM的软件包管理器
 	-update		更新yum包
+	-install[OPTION]  	安装软件包
 stat        显示文件的状态信息
 exit        退出
 ps          报告当前系统的进程状态
