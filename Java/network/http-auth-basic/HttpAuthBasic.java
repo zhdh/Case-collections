@@ -1,4 +1,7 @@
-
+/**
+ * http auth basic tool
+ * @author https://github.com/zhdh
+ */
 public class HttpAuthBasic {
 
     /**
