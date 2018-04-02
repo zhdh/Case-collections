@@ -14,7 +14,7 @@ import org.junit.Test;
 public class ExcelHandler {
 	
 	@Test
-	public void simpleExample() throws IOException {
+	public void simpleWriteExample() throws IOException {
 		// create new workbook
 		HSSFWorkbook workbook = new HSSFWorkbook();
 		// create new work sheet
@@ -30,6 +30,25 @@ public class ExcelHandler {
 		workbook.write(fos);
 		workbook.close();
 		fos.close();
+	}
+	
+	@Test
+	public void simpleReadExample() throws IOException {
+		// create output stream
+		FileInputStream fis = new FileInputStream(new File("E:\\simpleExample.xls"));
+		// set parameter
+		HSSFWorkbook workbook = new HSSFWorkbook(fis);
+		// get sheet
+		HSSFSheet sheet = workbook.getSheetAt(0);
+		// get row
+		HSSFRow row = sheet.getRow(0);
+		// get cell 
+		HSSFCell cell = row.getCell(2);
+		// get cell value
+		String cellValue = cell.getStringCellValue();
+		System.out.println("content" + cellValue);
+		workbook.close();
+		fis.close();
 	}
 
 }
