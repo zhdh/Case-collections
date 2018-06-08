@@ -48,6 +48,8 @@ ps          报告当前系统的进程状态
         ps aux | sort -nk 3     按CPU资源的使用量对进程进行排序
 chmod 		修改文件权限
 	chmod 777 *.*				修改目录下所有文件属性可写可读可执行
+tzselect	时区更改
+	TZ='Asia/Shanghai'; export TZ	时区更改为上海
 screen 		打开新窗口（需安装screen）
   -li         查看已打开窗口列表
   screen -X -S 1111 quit		关闭编号为 1111 的窗口
