@@ -1,0 +1,10 @@
+docker info																	docker 信息查看
+docker ps																	列出运行中的容器
+			-a																列出所有容器
+docker log $container_id													查看指定容器运行状态
+docker stop $container_id													停止指定容器
+docker restart $container_id												重启指定容器
+docker rm $container_id														移除指定容器
+docker commit $container_id	name											将指定容器保存为镜像
+docker images 																查看所有镜像列表
+docker run -d -p 58080:8080 --name mine mine/javaweb:1.0 /root/run.sh		指定端口、名称运行容器
