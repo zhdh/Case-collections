@@ -114,6 +114,16 @@ Spring Boot 是 Spring 的一套快速配置脚手架，可以基于Spring Boot 
 
 ### Tomcat
 
+**Tomcat目录层次结构**
+
+- bin: 存放启动和关闭Tomcat 的脚本文件
+- conf: 存放Tomcat 服务器的各种配置文件
+- lib: 存放Tomcat 服务器支撑的 jar 包
+- logs: 存放Tomcat 的日志文件
+- temp: 存放Tomcat 运行时产生的临时文件
+- webapps: web 资源的存放目录
+- work: Tomcat 的工作目录
+
 **Tomcat默认内存大小**
 
 JVM 在启动的时候会自动设置 Heap size 的值、初始空间是物理内存的1/64，最大空间是物理内存的1/4，可利用JVM 提供的 -Xmn -Xms -Xmx等选项进行设置。
