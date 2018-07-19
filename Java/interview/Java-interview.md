@@ -90,6 +90,18 @@ TransactionDefinition 接口中定义的事务传播行为：
 - PROPAGATION_NEVER : 总是非事务执行，如果存在一个活动事务，则抛出异常；
 - PROPAGATION_NESTED ： 如果一个活动的事务存在，则运行一个嵌套的事务中，如果没有活动事务则按照"PROPAGATION_REQUIRED" 执行；
 
+**Spring BeanFactory 与 FactoryBean 的区别**
+
+答：
+
+- BeanFactory
+
+BeanFactory，以Factory结尾，表示它是一个工厂类(接口)，用于管理 Bean 的一个工厂。在 Spring 中，BeanFactory 是IOC容器的核心接口，职责包括：实例化、定位、配置应用程序中的对象及建立对象间的依赖。
+
+- FactoryBean
+	
+以Bean 结尾，表示它是一个 Bean，不同于普通的 Bean 的是： 它实现了 FactoryBean<T> 接口的 bean，根据该 Bean 的 ID 从 BeanFactory中获取的实际上是 FactoryBean 的 getObject() 返回对象，而不是 FactoryBean 本身，如果要获取FactoryBean 对象，需要在 Id 前面加上一个"&"符号来获取。
+
 **Spring 中的dao 和 service 是单例还是多例**
 
 答：
