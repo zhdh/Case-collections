@@ -70,7 +70,18 @@ equals用来比较两个对象的内容是否相等。
 
 Spring 事务包含分布式事务和单机事务，用得较多的是单机事务，也就是只操作一个数据库的事务。单机事务可以分为“编程式事务模型”（TransactionTemplate) 和 声明式事务模型（@Transactional），后者可以理解为 AOP + 编程事务模型。
 
+**Spring 中的dao 和 service 是单例还是多例**
 
+答：
+
+Spring 生成的对象默认是单例的，可以通过 <i>bean</i> 的属性 scope="prototype" 改为非单例。注解形式： @Scope("prototype")
+
+>Spring scope 的四种作用域：singleton、prototype、request、session
+
+>> singleton: 单例，即 bean 对应的类只有一个实例；<br/>
+>> prototype: 多例，即每次从容器中取出 bean 时，都会生成一个新的实例；<br/>
+>> request: 每次接收一个请求时，都会生成一个新的实例；<br/>
+>> session: 在每一个 session 中只有一个该对象；<br/>
 
 ### Spring cloud
 
@@ -86,6 +97,8 @@ Spring Boot 是 Spring 的一套快速配置脚手架，可以基于Spring Boot 
 ###Spring boot
 
 **Spring boot 优缺点**
+
+
 
 
 ## 设计模式篇
