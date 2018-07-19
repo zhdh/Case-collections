@@ -94,7 +94,7 @@ Spring Cloud 是一套分布式服务治理的框架，专注于服务之间的�
 Spring Boot 是 Spring 的一套快速配置脚手架，可以基于Spring Boot 快速开发单个微服务，Spring Cloud 是基于Spring Boot 实现的云应用开发工具； 
 
 
-###Spring boot
+### Spring boot
 
 **Spring boot 优缺点**
 
