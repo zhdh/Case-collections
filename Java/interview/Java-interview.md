@@ -152,7 +152,6 @@ Spring Boot 是 Spring 的一套快速配置脚手架，可以基于Spring Boot 
 
 
 
-
 ## 设计模式篇
 
 **单例模式**
@@ -205,3 +204,19 @@ Tomcat 默认配置的最大请求数是150。
 
 >> Windos 每个进程中的线程数不允许超过 2000；<br/>
 >> Linux 每个进程中的线程数不允许超过 1000； <br/>
+
+## 概念及应用篇
+
+**分布式Session 的几种实现方式**
+
+1. 基于数据库的 Session 共享；
+2. 基于 NFS 共享文件系统；
+3. 基于Redis 进行 session 共享；
+4. 基于 Cookie 进行 session 共享；
+
+**Session 和 Cookie 的区别**
+
+1. session 保存在服务器中，客户端不知道其中信息，cookie 保存在客户端，服务器能够知道其中信息；
+2. session 中保存的是对象，cookie 保存的是字符串；
+3. session 不能区分路径，同一用户在访问一个网站期间，所有 session 在任何一个地方都能访问到，cookie 中如果设置了路径参数，同一个网站中的不同路径下的 cookie 互相访问不到；
+
