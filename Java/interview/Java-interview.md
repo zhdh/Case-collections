@@ -44,6 +44,10 @@ equals用来比较两个对象的内容是否相等。
 3.  只允许一个 null 元素；
 4.  实现类：HashSet、LinkedHashSet、TreeSet
 
+**HashSet 和 TreeSet 的区别**
+
+1. HashSet 按照哈希算法来存取集合中的对象，存取速度比较快；
+2. TreeSet 实现了 SortedSet 接口，能够对集合中的对象进行排序；
 
 ## 框架篇
 ### Spring
