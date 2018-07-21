@@ -17,7 +17,7 @@ equals用来比较两个对象的内容是否相等。
 
 答： throw 抛出一个异常对象；throws 声明一个异常可能被抛出；
 
-**volatile **
+**volatile**
 
 答： volatile 用于表示可以被多个线程异步修改的成员变量；
 
