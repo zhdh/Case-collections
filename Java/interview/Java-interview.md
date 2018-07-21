@@ -9,15 +9,15 @@
 答： ==比较的是变量内存中存放对象的地址，用来判断两个对象的地址是否相同，即是否指向同一个对象。<br/>
 equals用来比较两个对象的内容是否相等。
 
-** transient 的作用**
+**transient 的作用**
 
 答： transient 可以应用于类的成员变量，指出该成员变量不应该在包含它的类实例已序列化时被序列化；
 
-** throw 与 throws 的区别**
+**throw 与 throws 的区别**
 
 答： throw 抛出一个异常对象；throws 声明一个异常可能被抛出；
 
-** volatile **
+**volatile **
 
 答： volatile 用于表示可以被多个线程异步修改的成员变量；
 
@@ -61,12 +61,12 @@ equals用来比较两个对象的内容是否相等。
 1. HashSet 按照哈希算法来存取集合中的对象，存取速度比较快；
 2. TreeSet 实现了 SortedSet 接口，能够对集合中的对象进行排序；
 
-** Map的特性**
+**Map的特性**
 
 1. 提供 key-value 的映射；
 2. 每个 key 对应唯一一个 value；
 
-** HashTable 和 HashMap 的区别**
+**HashTable 和 HashMap 的区别**
 
 1. HashTable 线程安全；
 2. HashTable 在遇到 null 时，会抛出 NullPointerException 异常；
