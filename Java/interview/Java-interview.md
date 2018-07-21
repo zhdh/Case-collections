@@ -49,6 +49,17 @@ equals用来比较两个对象的内容是否相等。
 1. HashSet 按照哈希算法来存取集合中的对象，存取速度比较快；
 2. TreeSet 实现了 SortedSet 接口，能够对集合中的对象进行排序；
 
+** Map的特性**
+
+1. 提供 key-value 的映射；
+2. 每个 key 对应唯一一个 value；
+
+** HashTable 和 HashMap 的区别**
+
+1. HashTable 线程安全；
+2. HashTable 在遇到 null 时，会抛出 NullPointerException 异常；
+3. HashMap 可以接受 null 的键值；
+
 ## 框架篇
 ### Spring
 
