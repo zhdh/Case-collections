@@ -21,6 +21,14 @@ equals用来比较两个对象的内容是否相等。
 
 答： volatile 用于表示可以被多个线程异步修改的成员变量；
 
+**线程安全性的几种级别**
+
+1. 不可变的 (immutable) —— 该类实例不可变，所以不需要外部同步。例如String、Long、BigInteger；
+2. 无条件的线程安全 (unconditionally thread-safe) —— 该类实例可变，但有足够的内部同步，所以实例可以被并发使用，无需外部同步。例如Random、ConcurrentHashMap；
+3. 有条件的线程安全 (conditionally thread-safe) —— 除了部分方法为进行安全的并发操作而需要外部同步外，这种线程安全级别与无条件的线程安全相同。例如Collection.synchronized 包装的集合，它们的迭代器 (iterator) 要求外部同步；
+4. 非线程安全 (not thread-safe) —— 该类实例可变。必须利用自己选择的外部同步包围每个方法调用。例如ArrayList、HahsMap；
+5. 线程对立的 (thread-hostile) —— 该类不能被多个线程并发使用；
+
 ### 集合
 
 **Collection 里面有哪些子类？**<br/>
