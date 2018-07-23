@@ -166,9 +166,34 @@ Spring Cloud 是一套分布式服务治理的框架，专注于服务之间的�
 Spring Boot 是 Spring 的一套快速配置脚手架，可以基于Spring Boot 快速开发单个微服务，Spring Cloud 是基于Spring Boot 实现的云应用开发工具； 
 
 
+**什么是微服务**
+
+答：微服务是系统架构上的一种设计风格，主旨将一个原本独立的系统拆分成多个小型服务，这些小型服务都在各自独立的进程中运行，服务之间通过基于 HTTP 的 RESTful API 进行通信协作。
+
+**关键组件**
+
+- Spring Cloud Config : 配置管理工具，可实现应用配置的外部化存储，支持客户端配置信息刷新、加密/解密配置内容等。
+- Spring Cloud Netflix ： 核心组件，对多个 Netflix OSS 开源套件进行整合。
+	- Eureka: 服务治理组件，包含服务注册中心，服务注册于发现机制的实现。
+	- Hystrix: 容错管理组件，实现断路器模式，帮助服务依赖中出现的延迟和为故障提供强大的容错能力。
+	- Ribbon: 客户端负载均衡的服务调用组件。 
+	- Feign： 基于Ribbon 和 Hystrix 的声明式服务调用组件。
+	- Zuul： 网关组件，提供智能路由，访问过滤等功能。
+	- Archaius: 外部化配置组件。
+- Spring Cloud Bus: 事件、消息总线，用于传播集群中的状态变化或事件，以触发后续的处理，比如用来动态刷新配置等。
+- Spring Cloud Cluster: 针对Zookeeper、Redis、Hazelcast、Consul 的选举算法和通用状态模式的实现。
+- Spring Cloud Consul: 服务发现与配置管理工具。
+- Spring Cloud Stream: 通过Redis、Rabbit、或者 Kafka 实现的消费微服务，可以通过简单的声明式模型来发送和接收消息。
+- Spring Cloud Security: 安全工具包，提供 Zuul 代理中对 OAuth2 客户端请求中继器。
+- Spring Cloud ZooKeeper: 基于 Zookeeper 的服务发现与配置管理组件。
+- Spring Cloud Starters: Spring Cloud 的基础组件，基于Spring Boot风格项目的基础依赖模块。
+- Spring Cloud CLI: 用于快速创建 Spring Cloud 应用的 Spring Boot CLI 插件。
+- ......
 ### Spring boot
 
 **Spring boot 优缺点**
+
+
 
 
 
