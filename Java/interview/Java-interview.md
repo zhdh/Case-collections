@@ -21,6 +21,14 @@ equals用来比较两个对象的内容是否相等。
 
 答： volatile 用于表示可以被多个线程异步修改的成员变量；
 
+**++操作符是否线程安全**
+
+答：不是线程安全的操作，涉及多个指令，如读取变量值，增加，存储回内存等，过程中可能会出现多个线程交叉。
+
+**能否保证GC执行**
+
+答：不能，虽然可以吊桶 System.gc() 或 Runtime.getRuntime().gc(),但无法保证 GC 执行。
+
 **线程安全性的几种级别**
 
 1. 不可变的 (immutable) —— 该类实例不可变，所以不需要外部同步。例如String、Long、BigInteger；
@@ -35,6 +43,14 @@ equals用来比较两个对象的内容是否相等。
 2. 实现 Runnable 接口创建线程。
 3. 实现 Callable 接口通过 FutureTask 包装器来创建 Thread 线程。
 4. 使用 ExecutorService、Callable、Future 实现有返回结果的线程。
+
+
+**Java中，编写多线程遵循哪些最佳实践**
+
+- 给线程命名，可以帮助调试。
+- 偏向使用 volatile 而不是 synchronized。
+- 优先使用并发集合，而不是对集合进行同步。并发集合提供了更好的扩展性。
+
 
 **JSP中九个内置对象**
 
@@ -70,6 +86,14 @@ equals用来比较两个对象的内容是否相等。
 2. 可以插入多个 null 元素；
 3. 保持每个元素的插入顺序；
 4. 常用实现类有：ArrayList、LinkedList、Vector；
+
+**poll()和remove() 的区别**
+
+答： poll() 和 remove() 都是从队列中取出一个元素，但是 poll() 在获取元素失败的时候会返回空，remove()会抛出异常。
+
+**有哪两种方式实现集合的排序**
+
+答： 可以使用有序集合，如 TreeSet 或 TreeMap，也可以使用有顺序的集合，如list 通过Collections.sort() 来排序。
 
 
 **ArrayList和LinkedList的区别**
@@ -229,7 +253,12 @@ Spring Boot 是 Spring 的一套快速配置脚手架，可以基于Spring Boot 
 
 - 学习成本
 
+**@SpringBootApplication注解作用**
 
+- @SpringBootApplication开启了 Spring 的组件扫描和Spring Boot的自动配置功能。它将三个注解组合在了一起。
+	- Spring 的 @Configuration： 标明该类使用 Spring 基于 Java 的配置。
+	- Spring 的 @ComponentScan： 启用组件扫描，Web控制器和其他组件会被自动发现并注册为 Spring 应用程序上下文的Bean。
+	- Spring Boot 的 @EnableAutoConfiguration： 开启Spring Boot自动配置。 
 
 ## 设计模式篇
 
