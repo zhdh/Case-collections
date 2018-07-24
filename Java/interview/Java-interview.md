@@ -29,6 +29,14 @@ equals用来比较两个对象的内容是否相等。
 4. 非线程安全 (not thread-safe) —— 该类实例可变。必须利用自己选择的外部同步包围每个方法调用。例如ArrayList、HahsMap；
 5. 线程对立的 (thread-hostile) —— 该类不能被多个线程并发使用；
 
+**多线程实现的四种方式**
+
+1. 继承 Thread 类创建线程。
+2. 实现 Runnable 接口创建线程。
+3. 实现 Callable 接口通过 FutureTask 包装器来创建 Thread 线程。
+4. 使用 ExecutorService、Callable、Future 实现有返回结果的线程。
+
+
 ### 集合
 
 **Collection 里面有哪些子类？**<br/>
