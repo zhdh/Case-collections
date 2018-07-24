@@ -36,6 +36,24 @@ equals用来比较两个对象的内容是否相等。
 3. 实现 Callable 接口通过 FutureTask 包装器来创建 Thread 线程。
 4. 使用 ExecutorService、Callable、Future 实现有返回结果的线程。
 
+**JSP中九个内置对象**
+
+1. request
+2. response
+3. config
+4. application
+5. session
+6. exception
+7. page
+8. out
+9. pageContext
+
+**JSP四个作用域**
+
+1. ServletContext ---- context 域
+2. HttpServletRequest ---- request 域
+3. HttpSession ---- session 域
+4. PageContext ---- page 域
 
 ### 集合
 
@@ -201,7 +219,15 @@ Spring Boot 是 Spring 的一套快速配置脚手架，可以基于Spring Boot 
 
 **Spring boot 优缺点**
 
+优点：
 
+- 简化配置
+- 简化依赖
+- 插件扩展
+
+缺点：
+
+- 学习成本
 
 
 
