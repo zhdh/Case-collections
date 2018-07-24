@@ -321,6 +321,8 @@ Tomcat 默认配置的最大请求数是150。
 > 索引会加快数据库的检索速度，但需要占物理和数据空间，索引会降低插入、删除、修改等维护任务的速度。
 
 
+### Redis
+
 **单线程的Redis为什么速度快**
 
 - 纯内存操作
@@ -328,3 +330,13 @@ Tomcat 默认配置的最大请求数是150。
 - 采用的非阻塞I/O多路复用机制
 
 > I/O 多路复用指的是，让单个线程来检查多个文件描述符(Socket) 的就绪状态，一旦某个描述符就绪(一般指读或写就绪)，能够通知程序进行相应的读写操作。
+
+
+**Redis的数据类及使用场景**
+
+- String： 常规的 get/set 操作。Value可以是 String 或数字，一般用于普通的 key/value 存储。
+- Hash: 常用命令hget，hset，hgetall。Value，存放的是结构化对象，常用于操作其中某个字段。
+- List： 常用命令 lpush，rpush，lpop，rpop，lrange，可应用于消息队列，或分页功能。
+- Set： 常用命令sadd，spop，smembers，sunion，存储的是一堆不重复值的组合，可以做去重操作。
+- Sorted Set：常用命令zadd，zrange，zrem，zcard，可以通过用户额外提供一个优先级参数来为成员排序。
+- Pub/Sub： 发布订阅，能够实时订阅取消频道。
