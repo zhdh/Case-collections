@@ -135,6 +135,14 @@ equals用来比较两个对象的内容是否相等。
 2. HashTable 在遇到 null 时，会抛出 NullPointerException 异常；
 3. HashMap 可以接受 null 的键值；
 
+**拦截器和过滤器的区别**
+
+1. 拦截器是基于Java 的反射机制，过滤器是基于函数回调。
+2. 拦截器不依赖Servlet 容器，过滤器依赖Servlet 容器。
+3. 拦截器只对action 请求起作用，过滤器对任何请求都起作用。
+4. 拦截器可以获取IOC 容器中的各个bean，过滤器不行。
+5. 过滤器是在请求进入容器后，进入servlet 之前进行预处理。
+
 ## 框架篇
 ### Spring
 
