@@ -27,7 +27,7 @@ equals用来比较两个对象的内容是否相等。
 
 **能否保证GC执行**
 
-答：不能，虽然可以吊桶 System.gc() 或 Runtime.getRuntime().gc(),但无法保证 GC 执行。
+答：不能，虽然可以调用 System.gc() 或 Runtime.getRuntime().gc(),但无法保证 GC 执行。
 
 **线程安全性的几种级别**
 
