@@ -229,6 +229,9 @@ Spring 生成的对象默认是单例的，可以通过 <i>bean</i> 的属性 sc
 >> request: 每次接收一个请求时，都会生成一个新的实例；<br/>
 >> session: 在每一个 session 中只有一个该对象；<br/>
 
+**@Resource和@Autowired的区别**
+
+
 ### Spring cloud
 
 **什么是Spring Cloud**
