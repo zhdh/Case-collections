@@ -231,6 +231,9 @@ Spring 生成的对象默认是单例的，可以通过 <i>bean</i> 的属性 sc
 
 **@Resource和@Autowired的区别**
 
+- 两者都可以作用在字段和setter方法上。
+- 前者为J2EE提供，后者属于Spring。
+- @Resource 默认按照ByName自动注入，@Autowired按照类型装配依赖对象。 
 
 ### Spring cloud
 
